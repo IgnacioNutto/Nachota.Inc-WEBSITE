@@ -1,0 +1,137 @@
+body{
+    background-color: rgba(172, 1, 19, 1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-small{
+    font-size: 15px;
+    margin: 0;
+}
+
+.text-header{
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.color-red-1{
+    background-color: rgba(181, 25, 25, 1);
+}
+
+.main-image {
+    width: 250px;
+}
+
+.searchbar{
+    background-color: rgba(140, 0, 21, 1);
+    border: none;   
+}
+.lupa{
+    max-width: 25px;
+}
+
+.form-control:focus {
+    color: none;
+    background-color: rgba(140, 0, 21, 1);
+    border-color: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    background: rgba(172, 1, 19, 1);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 10px 0 10px 0;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: rgba(140, 0, 21, 1);
+}
+
+.pad-0{
+    padding: 0;    
+}
+
+.text-destacados{
+    text-align: center;
+    color: black;
+    padding: 20px;
+    background-color: rgba(196, 196, 196, 1);
+}
+
+h2{
+    margin: 0;
+}
+
+.destacados{
+    background-color: white;
+}
+
+.card{
+    border: none;
+    background-color: #fbfbfb;
+    text-align: center;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+.card-info{
+    margin: 5px 5px 5px 5px;
+}
+
+.card-info h2{
+    font-size: 20px;
+}
+
+.card-info p{
+    margin: 0ch;
+    color: #8c0015;
+}
+.button{
+    background-color: rgb(181, 25, 25);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 7px 5px 7px;
+}
+.button:hover{
+    color: rgb(53, 53, 53);
+}
+.footer{
+    background-color: #8c0015;
+}
+.footer-info{
+    color: white;
+    padding: 50px 25px;
+    margin:0;
+}
+.redes{
+    max-width: 40px;
+    padding-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.carrousel{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
