@@ -5,7 +5,7 @@ const data = require('./utils/data')
 const title = 'Nachota.Inc'
 const port = process.env.PORT || 3000;
 
-app.set('views', path.join(_dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
