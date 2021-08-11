@@ -50,7 +50,7 @@ app.get('/mangas', (req, res) => {
 
 app.get('/contacto', (req, res) => {
     res.render('pages/contacto', {
-        title: 'Nachota.Inc | Contacto'
+        title:  `${title} | Contacto`
     })
 });
 
