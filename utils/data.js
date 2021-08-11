@@ -1,7 +1,7 @@
 const request = require('postman-request');
 
 const getAllProducts = (callback) => {
-    request('https://nacho-api-utn.herokuapp.com/dishes', (error, res, body) => {
+    request('https://nachota-inc-api.herokuapp.com/products', (error, res, body) => {
         if(error){
           console.log('Error', error)  
           return callback(error, undefined);
