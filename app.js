@@ -55,5 +55,5 @@ app.get('/contacto', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('Funcionando en el puerto 3000');
+    console.log('Funcionando en el puerto 3000')
 });
