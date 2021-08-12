@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const data = require('./utils/data')
+const data = require('./utils/data');
 const title = 'Nachota.Inc'
 const port = process.env.PORT || 3000;
 
@@ -54,6 +54,6 @@ app.get('/contacto', (req, res) => {
     })
 });
 
-app.listen(port, () => {
+app.listen(port, ()=>{
     console.log('Funcionando en el puerto 3000')
-});
+})
