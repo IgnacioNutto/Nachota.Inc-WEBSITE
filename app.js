@@ -24,11 +24,13 @@ app.get('/', (req, res) => {
     })
 });
 
+
 app.get('/ofertas', (req, res) => {
     res.render('pages/ofertas', {
         title: `${title} | Ofertas`,
     })
 });
+
 
 app.get('/productos', (req, res) => {
     res.render('pages/productos',{

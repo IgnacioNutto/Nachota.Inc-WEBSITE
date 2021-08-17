@@ -15,7 +15,6 @@ const getAllProducts = (callback) => {
     });
 }
 
-
 module.exports= {
  
   getAllProducts
