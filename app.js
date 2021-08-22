@@ -33,17 +33,27 @@ app.get('/ofertas', (req, res) => {
         }
         const JSONBodyOfertas = JSON.parse(data);
         return res.render('pages/ofertas', {
-            title,
+            title: `${title} | Ofertas`,
             JSONBodyOfertas
         });
     });    
 });
 
 app.get('/productos', (req, res) => {
-    res.render('pages/productos',{
-        title: `${title} | Productos`,
-    })
+    data.getAllProductos((error, data) => {
+        if(error){
+            return res.send({
+                error
+            })
+        }
+        const JSONBodyProductos = JSON.parse(data);
+        return res.render('pages/productos', {
+            title: `${title} | Productos`,
+            JSONBodyProductos
+        });
+    });    
 });
+
 
 app.get('/figuras', (req, res) => {
     res.render('pages/figuras',{
