@@ -45,8 +45,40 @@ const getAllProductos = (callback) => {
     });
 }
 
+const getAllFiguras = (callback) => {
+    request('https://nachota-inc-api.herokuapp.com/figuras', (error, res, body) => {
+        if(error){
+          console.log('Error', error)  
+          return callback(error, undefined);
+        }
+        if (res){
+            if(body){
+               return callback(undefined, body);
+            }
+            callback("No se encontraron figuras.", undefined);
+        }
+    });
+}
+
+const getAllMangas = (callback) => {
+    request('https://nachota-inc-api.herokuapp.com/mangas', (error, res, body) => {
+        if(error){
+          console.log('Error', error)  
+          return callback(error, undefined);
+        }
+        if (res){
+            if(body){
+               return callback(undefined, body);
+            }
+            callback("No se encontraron mangas.", undefined);
+        }
+    });
+}
+
 module.exports= {
     getAllDestacados,
     getAllOfertas,
-    getAllProductos
+    getAllProductos,
+    getAllFiguras,
+    getAllMangas
 };

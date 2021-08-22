@@ -56,16 +56,35 @@ app.get('/productos', (req, res) => {
 
 
 app.get('/figuras', (req, res) => {
-    res.render('pages/figuras',{
-        title: `${title} | Figuras`,
-    })
+    data.getAllFiguras((error, data) => {
+        if(error){
+            return res.send({
+                error
+            })
+        }
+        const JSONBodyFiguras = JSON.parse(data);
+        return res.render('pages/figuras', {
+            title: `${title} | Figuras`,
+            JSONBodyFiguras
+        });
+    });    
 });
 
 app.get('/mangas', (req, res) => {
-    res.render('pages/mangas',{
-        title: `${title} | Mangas`,
-    })
+    data.getAllMangas((error, data) => {
+        if(error){
+            return res.send({
+                error
+            })
+        }
+        const JSONBodyMangas = JSON.parse(data);
+        return res.render('pages/mangas', {
+            title: `${title} | Mangas`,
+            JSONBodyMangas
+        });
+    });    
 });
+
 
 app.get('/contacto', (req, res) => {
     res.render('pages/contacto', {
