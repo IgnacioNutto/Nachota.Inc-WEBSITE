@@ -21,16 +21,23 @@ app.get('/', (req, res) => {
             title,
             JSONBody
         });
-    })
+    });
 });
-
 
 app.get('/ofertas', (req, res) => {
-    res.render('pages/ofertas', {
-        title: `${title} | Ofertas`,
-    })
+    data.getAllOfertas((error, data) => {
+        if(error){
+            return res.send({
+                error
+            })
+        }
+        const JSONBodyOfertas = JSON.parse(data);
+        return res.render('pages/ofertas', {
+            title,
+            JSONBodyOfertas
+        });
+    });    
 });
-
 
 app.get('/productos', (req, res) => {
     res.render('pages/productos',{
