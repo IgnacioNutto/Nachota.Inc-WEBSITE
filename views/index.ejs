@@ -44,14 +44,14 @@
                 </div>
                 <div class="destacados container">
                     <div class="row">
-                        <% JSONBody.forEach(product =>{ %>
+                        <% JSONBody.forEach(destacado =>{ %>
 
                             <div class="pad-0 col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3">
                                 <div class="card">
-                                    <img src="<%= product.img %>" alt="<%= product.name %>">
+                                    <img src="<%= destacado.img %>" alt="<%= destacado.name %>">
                                     <div class="card-info">
-                                        <h2><%= product.name %></h2>
-                                        <p>$<%= product.price %></p>       
+                                        <h2><%= destacado.name %></h2>
+                                        <p>$<%= destacado.price %></p>       
                                         <a class="button" href="/contacto">COMPRAR</a>          
                                     </div>
                                 </div>

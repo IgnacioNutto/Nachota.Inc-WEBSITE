@@ -1,7 +1,7 @@
 const request = require('postman-request');
 
-const getAllProducts = (callback) => {
-    request('https://nachota-inc-api.herokuapp.com/products', (error, res, body) => {
+const getAllDestacados = (callback) => {
+    request('https://nachota-inc-api.herokuapp.com/destacados', (error, res, body) => {
         if(error){
           console.log('Error', error)  
           return callback(error, undefined);
@@ -10,7 +10,7 @@ const getAllProducts = (callback) => {
             if(body){
                return callback(undefined, body);
             }
-            callback("No se encontraron productos.", undefined);
+            callback("No se encontraron destacados.", undefined);
         }
     });
 }
@@ -46,7 +46,7 @@ const getAllProductos = (callback) => {
 }
 
 module.exports= {
-    getAllProducts,
+    getAllDestacados,
     getAllOfertas,
     getAllProductos
 };
